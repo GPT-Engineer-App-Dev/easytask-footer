@@ -1,6 +1,12 @@
 import { useState } from "react";
-import { Container, VStack, HStack, Input, Button, Checkbox, Text, IconButton } from "@chakra-ui/react";
+import { Container, VStack, HStack, Input, Button, Checkbox, Text, IconButton, Box } from "@chakra-ui/react";
 import { FaTrash } from "react-icons/fa";
+
+const Footer = () => (
+  <Box as="footer" width="100%" py={4} textAlign="center" borderTop="1px" borderColor="gray.200" mt={4}>
+    <Text fontSize="sm" color="gray.600">© 2023 Todo App. All rights reserved.</Text>
+  </Box>
+);
 
 const Index = () => {
   const [todos, setTodos] = useState([]);
@@ -50,6 +56,7 @@ const Index = () => {
           ))}
         </VStack>
       </VStack>
+      <Footer />
     </Container>
   );
 };
